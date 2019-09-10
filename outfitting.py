@@ -1,5 +1,9 @@
+from __future__ import print_function
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
 from collections import OrderedDict
-import cPickle
+import pickle
 from os.path import join
 import time
 
@@ -349,7 +353,7 @@ def lookup(module, ship_map, entitled=False):
 
     # Lazily populate
     if not moduledata:
-        moduledata.update(cPickle.load(open(join(config.respath, 'modules.p'),  'rb')))
+        moduledata.update(pickle.load(open(join(config.respath, 'modules.p'),  'rb')))
 
     # if not module.get('category'): raise AssertionError('%s: Missing category' % module['id'])	# only present post 1.3, and not present in ship loadout
     if not module.get('name'): raise AssertionError('%s: Missing name' % module['id'])
@@ -487,7 +491,7 @@ def lookup(module, ship_map, entitled=False):
     if __debug__:
         m = moduledata.get(key, {})
         if not m:
-            print 'No data for module %s' % key
+            print('No data for module %s' % key)
         elif new['name'] == 'Frame Shift Drive':
             assert 'mass' in m and 'optmass' in m and 'maxfuel' in m and 'fuelmul' in m and 'fuelpower' in m, m
         else:
@@ -515,13 +519,13 @@ def export(data, filename):
 
     h = open(filename, 'wt')
     h.write(header)
-    for v in data['lastStarport'].get('modules', {}).itervalues():
+    for v in data['lastStarport'].get('modules', {}).values():
         try:
             m = lookup(v, companion.ship_map)
             if m:
                 h.write('%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' % (rowheader, m['category'], m['name'], m.get('mount',''), m.get('guidance',''), m.get('ship',''), m['class'], m['rating'], m['id'], data['timestamp']))
         except AssertionError as e:
-            if __debug__: print 'Outfitting: %s' % e	# Silently skip unrecognized modules
+            if __debug__: print('Outfitting: %s' % e)	# Silently skip unrecognized modules
         except:
             if __debug__: raise
     h.close()
