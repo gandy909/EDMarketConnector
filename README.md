@@ -1,3 +1,17 @@
+# Python3 Compatibility
+
+If you're reading this then you're using code based on Athanasius' work to get EDMC running under Python3.  This is very much experimental.  You should take **great care to ensure that you do not cause anyone else, particuarly third party sites such as EDSM any issues when running this code**.
+
+1. To that end you will NEED to set CLIENT_ID in your environment, or edit companion.py to put it in, for the CAPI service to work.  **DO NOT SIMPLY REVERT THIS CHANGE SO THAT IT USES EDMC'S USUAL CLIENT ID!!!**
+1. Please ensure you have first run a release version of EDMC to change your settings so that you **WILL NOT BE SENDING ANY DATA OUT TO THIRD PARTIES**.  This includes:
+	1. EDDN tab: untick "Send station data to the Elite Dangerous Data Network" and "Send system and scan data to the Elite Dangerous Data Network"
+	1. EDSM tab: untick "Send flight log and Cmdr status to EDSM"
+	1. Inara Tab: untick "Send flight log and Cmdr status to Inara"
+	1. Plugins: If you run any third-party plugins, disable them entirely for now.  If you are working on compatibility with this version then you're responsible for ensuring you don't stomp over someone's data input stream.
+
+----
+
+
 [![Discord chat](https://img.shields.io/discord/164411426939600896.svg?style=social&label=Discord%20chat)](https://discord.gg/usQ5e6n)
 
 Elite: Dangerous Market Connector (EDMC)
