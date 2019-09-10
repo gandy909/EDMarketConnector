@@ -105,12 +105,13 @@ class EDDN(object):
         msg = OrderedDict([
             ('$schemaRef', msg['$schemaRef']),
             ('header',     OrderedDict([
-                ('softwareName',    '%s [%s]' % (applongname, sys.platform=='darwin' and "Mac OS" or system())),
+                ('softwareName',    'Py3-EDMC-Athanasius [%s]' % (applongname, sys.platform=='darwin' and "Mac OS" or system())),
                 ('softwareVersion', appversion),
                 ('uploaderID',      uploaderID),
             ])),
             ('message',    msg['message']),
         ])
+                #('softwareName',    '%s [%s]' % (applongname, sys.platform=='darwin' and "Mac OS" or system())),
 
         r = self.session.post(self.UPLOAD, data=json.dumps(msg), timeout=self.TIMEOUT)
         if __debug__ and r.status_code != requests.codes.ok:
