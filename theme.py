@@ -1,3 +1,4 @@
+from __future__ import division
 #
 # Theme support
 #
@@ -5,12 +6,17 @@
 # So can't use ttk's theme support. So have to change colors manually.
 #
 
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
+from builtins import object
+from past.utils import old_div
 from sys import platform
 from os.path import join
 
-import Tkinter as tk
-import ttk
-import tkFont
+import tkinter as tk
+from tkinter import ttk
+from tkinter import font as tkFont
 
 from config import appname, applongname, config
 
@@ -94,7 +100,7 @@ elif platform == 'linux2':
         dpy = None
 
 
-class _Theme:
+class _Theme(object):
 
     def __init__(self):
         self.active = None	# Starts out with no theme
@@ -151,7 +157,7 @@ class _Theme:
                 'foreground'         : config.get('dark_text'),
                 'activebackground'   : config.get('dark_text'),
                 'activeforeground'   : 'grey4',
-                'disabledforeground' : '#%02x%02x%02x' % (r/384, g/384, b/384),
+                'disabledforeground' : '#%02x%02x%02x' % (old_div(r,384), old_div(g,384), old_div(b,384)),
                 'highlight'          : config.get('dark_highlight'),
                 'font'               : 'TkDefaultFont',
             }
@@ -192,12 +198,12 @@ class _Theme:
                 # not a widget
                 widget.configure(foreground = self.current['foreground'],
                                  background = self.current['background'])
-            elif 'cursor' in widget.keys() and str(widget['cursor']) not in ['', 'arrow']:
+            elif 'cursor' in list(widget.keys()) and str(widget['cursor']) not in ['', 'arrow']:
                 # Hack - highlight widgets like HyperlinkLabel with a non-default cursor
                 widget.configure(foreground = self.current['highlight'],
                                  background = self.current['background'],
                                  font = self.current['font'])
-            elif 'activeforeground' in widget.keys():
+            elif 'activeforeground' in list(widget.keys()):
                 # e.g. tk.Button, tk.Label, tk.Menu
                 widget.configure(foreground = self.current['foreground'],
                                  background = self.current['background'],
@@ -206,12 +212,12 @@ class _Theme:
                                  disabledforeground = self.current['disabledforeground'],
                                  font = self.current['font']
                 )
-            elif 'foreground' in widget.keys():
+            elif 'foreground' in list(widget.keys()):
                 # e.g. ttk.Label
                 widget.configure(foreground = self.current['foreground'],
                                  background = self.current['background'],
                                  font = self.current['font'])
-            elif 'background' in widget.keys():
+            elif 'background' in list(widget.keys()):
                 # e.g. Frame
                 widget.configure(background = self.current['background'])
                 widget.configure(highlightbackground = self.current['disabledforeground'])
