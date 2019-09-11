@@ -6,15 +6,20 @@
 	1. EDDN
 		1. Revert forcing "is_beta = True" in plugins/eddn.py e54226cbabf68d9e18e2d70b241ce667a788c00e
 		1. Station Data
-			1. Commodity
-			1. Outfitting
-			1. Shipyard
+			1. Commodity - WORKS
+			1. Outfitting - WORKS
+			1. Shipyard - WORKS
 		1. System and Scan data
 	1. EDSM
-		1. Flight log - Appears working.
+		1. Flight log - WORKS
+		1. Current ship - WORKS
 		1. Scans
 	1. Inara
 		A quick test had credits balance and current ship update correctly.  Note that Inara won't accept API use as-is (I'm being cagey about why in case there are still bugs, I don't want any 'helpful' tester to spam his API with bad data).
 	1. EDDB
+		1. Only receives EDDN data
+		1. Used for lookups
+			1. System
+			1. Station
 	1. Coriolis
 	1. ED shipyard
