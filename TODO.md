@@ -11,7 +11,10 @@
 			1. Shipyard
 		1. System and Scan data
 	1. EDSM
+		1. Flight log - Appears working.
+		1. Scans
 	1. Inara
+		A quick test had credits balance and current ship update correctly.  Note that Inara won't accept API use as-is (I'm being cagey about why in case there are still bugs, I don't want any 'helpful' tester to spam his API with bad data).
 	1. EDDB
 	1. Coriolis
 	1. ED shipyard
