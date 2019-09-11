@@ -785,9 +785,10 @@ def call(callback=None):
     if not this.events:
         return
 
+    inara_applongname = 'E:D Market Connector'
     data = OrderedDict([
         ('header', OrderedDict([
-            ('appName', applongname),
+            ('appName', inara_applongname),
             ('appVersion', appversion),
             ('APIkey', credentials(this.cmdr)),
             ('commanderName', this.cmdr),
