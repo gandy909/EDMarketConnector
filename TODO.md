@@ -19,7 +19,7 @@
 	1. EDDB
 		1. Only receives EDDN data
 		1. Used for lookups
-			1. System
-			1. Station
+			1. System - WORKS
+			1. Station - WORKS
 	1. Coriolis
 	1. ED shipyard
