@@ -29,4 +29,8 @@
 			1. System - WORKS
 			1. Station - WORKS
 	1. Coriolis
+		- Looks to be currently disabled upstream.
 	1. ED shipyard
+		1. Load current ship build on click - WORKS
+		1. Look into this from taleden:
+			feel free to also at some point switch to POSTing to edsy.org/import with the build in a 'loadout' field; that'd avoid some ugly URLs that are sometimes too long for some browsers :)
