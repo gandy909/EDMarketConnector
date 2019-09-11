@@ -10,9 +10,9 @@ from os.path import expanduser, dirname, exists, isdir, join, normpath
 from sys import platform
 
 
-appname = 'EDMarketConnector'
-applongname = 'E:D Market Connector'
-appcmdname = 'EDMC'
+appname = 'Py3MiggyEDMarketConnector'
+applongname = 'Py3Miggy E:D Market Connector'
+appcmdname = 'Py3MiggyEDMC'
 appversion = '3.4.2.0'
 
 update_feed = 'https://marginal.org.uk/edmarketconnector.xml'
