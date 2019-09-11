@@ -14,8 +14,14 @@
 		1. Flight log - WORKS
 		1. Current ship - WORKS
 		1. Scans
+		1. Lookups
+			1. System
+			1. Station
 	1. Inara
 		A quick test had credits balance and current ship update correctly.  Note that Inara won't accept API use as-is (I'm being cagey about why in case there are still bugs, I don't want any 'helpful' tester to spam his API with bad data).
+		1. Lookups
+			1. System
+			1. Station
 	1. EDDB
 		1. Only receives EDDN data
 		1. Used for lookups
