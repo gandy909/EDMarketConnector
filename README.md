@@ -9,6 +9,18 @@ If you're reading this then you're using code based on Athanasius' work to get E
 	1. Inara Tab: untick "Send flight log and Cmdr status to Inara"
 	1. Plugins: If you run any third-party plugins, disable them entirely for now.  If you are working on compatibility with this version then you're responsible for ensuring you don't stomp over someone's data input stream.
 
+## Caveats for Python3 testing
+
+1. Due to an issue with the 'git bash' windows I'm using to test this I've forced the program to always log stderr and stdout to a file (as it does once frozen by py2exe).  This will be going to the %TEMP% - but see the caveat below about changed application names.  Expect the filename "Py3MiggyEDMarketConnector.log"
+
+1. To help avoid any 'oopses' the code has been changed to always use the '/test' versions of EDDN schemas.  So, if you're trying to check what you've sent by listening to EDDN keep that in mind.
+
+1. The code is using changed strings for the application name etc.
+		appname = 'Py3MiggyEDMarketConnector'
+		applongname = 'Py3Miggy E:D Market Connector'
+		appcmdname = 'Py3MiggyEDMC'
+  This will affect folder and filenames, along with the softwareName send in EDDN messages.  As well as the log file above this also means %LOCALAPPDATA%\Py3MiggyEDMarketConnector\ for the replay.jsonl file and any other such.
+
 ----
 
 
