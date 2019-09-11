@@ -6,6 +6,9 @@
 	1. EDDN
 		1. Revert forcing "is_beta = True" in plugins/eddn.py e54226cbabf68d9e18e2d70b241ce667a788c00e
 		1. Station Data
+			1. Commodity
+			1. Outfitting
+			1. Shipyard
 		1. System and Scan data
 	1. EDSM
 	1. Inara
