@@ -54,10 +54,10 @@
 		1. Hotkey
 		1. Only when Elite Dangerous is the active app
 		1. Play sound
-		1. Preferred websites
-			1. Shipyard
-			1. System
-			1. Station
+		1. Preferred websites - WORKS
+			1. Shipyard - WORKS
+			1. System - WORKS
+			1. Station - WORKS
 	1. Appearance
 		1. Language - WORKS (French tested)
 		1. Theme - WORKS
