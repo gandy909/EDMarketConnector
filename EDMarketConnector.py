@@ -798,7 +798,7 @@ if __name__ == "__main__":
 
         EnumWindows(enumwindowsproc, 0)
 
-    if getattr(sys, 'frozen', False):
+    if getattr(sys, 'frozen', False) or True:
         # By default py2exe tries to write log to dirname(sys.executable) which fails when installed
         import tempfile
         sys.stdout = sys.stderr = open(join(tempfile.gettempdir(), '%s.log' % appname), 'wt', 1)	# unbuffered not allowed for text in python3, so use line buffering
