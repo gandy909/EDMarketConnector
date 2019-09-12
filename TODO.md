@@ -44,8 +44,8 @@
 		1. Automatically update on docking
 	1. EDDN
 		1. Send station data to the Elite Dangerous Data Network - WORKS
-		1. Send system and scan data to the Elite Dangerous Data Network
-		1. Delay sending until docked
+		1. Send system and scan data to the Elite Dangerous Data Network - WORKS
+		1. Delay sending until docked - WORKS
 	1. EDSM - WORKS
 		1. Send flight log and Cmdr status to EDSM - WORKS
 	1. Inara
