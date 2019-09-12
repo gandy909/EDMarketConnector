@@ -52,7 +52,7 @@
 		1. Send flight log and Cmdr status to Inara
 	1. Configuration
 		1. Hotkey - WORKS
-		1. Only when Elite Dangerous is the active app - Works for 'Off'
+		1. Only when Elite Dangerous is the active app - Works for 'Off'.  'On' without game running does block correctly.
 		1. Play sound - WORKS
 		1. Preferred websites - WORKS
 			1. Shipyard - WORKS
