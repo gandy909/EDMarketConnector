@@ -60,10 +60,10 @@
 			1. Station
 	1. Appearance
 		1. Language
-		1. Theme
-			1. Default
-			1. Dark
-			1. Transparent
+		1. Theme - WORKS
+			1. Default - WORKS
+			1. Dark - WORKS
+			1. Transparent - WORKS
 		1. Always On top
 	1. Plugins
 		1. Plugins folder
