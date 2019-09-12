@@ -19,8 +19,6 @@ from config import config
 import outfitting
 import companion
 
-def plugin_start():
-    return "coriolis"
 
 if __name__ == "__main__":
 

@@ -798,10 +798,10 @@ if __name__ == "__main__":
 
         EnumWindows(enumwindowsproc, 0)
 
-    if getattr(sys, 'frozen', False) or True:
+    if getattr(sys, 'frozen', False):
         # By default py2exe tries to write log to dirname(sys.executable) which fails when installed
         import tempfile
-        sys.stdout = sys.stderr = open(join(tempfile.gettempdir(), '%s.log' % appname), 'wt', buffering=1)	# unbuffered not allowed for text in python3, so use line buffering
+        sys.stdout = sys.stderr = open(join(tempfile.gettempdir(), '%s.log' % appname), 'wt', 0)	# unbuffered
         print('%s %s %s' % (applongname, appversion, strftime('%Y-%m-%dT%H:%M:%S', localtime())))
 
     Translations.install(config.get('language') or None)	# Can generate errors so wait til log set up
