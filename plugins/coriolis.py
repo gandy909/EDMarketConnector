@@ -3,10 +3,7 @@
 import base64
 import gzip
 import json
-import StringIO
-
-import companion
-import plug
+import io
 
 # Migrate settings from <= 3.01
 from config import config
@@ -24,7 +21,8 @@ def shipyard_url(loadout, is_beta):
     if not string:
         return False
 
-    out = StringIO.StringIO()
+    out = io.BytesIO()
     with gzip.GzipFile(fileobj=out, mode='w') as f:
         f.write(string)
-    return (is_beta and 'https://beta.coriolis.io/import?data=' or 'https://coriolis.io/import?data=') + base64.urlsafe_b64encode(out.getvalue()).replace('=', '%3D')
+
+    return (is_beta and 'https://beta.coriolis.io/import?data=' or 'https://coriolis.io/import?data=') + base64.urlsafe_b64encode(out.getvalue()).decode().replace('=', '%3D')

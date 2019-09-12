@@ -29,8 +29,7 @@
 			1. System - WORKS
 			1. Station - WORKS
 	1. Coriolis
-		- Looks to be currently disabled upstream.
-		- No, actually there's some bug preventing it being listed in the configuration dropdown.  So need to investigate that.
+		1. Load current ship build on click - WORKS
 	1. ED shipyard
 		1. Load current ship build on click - WORKS
 		1. Look into this from taleden:
