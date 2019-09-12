@@ -35,3 +35,35 @@
 		1. Load current ship build on click - WORKS
 		1. Look into this from taleden:
 			feel free to also at some point switch to POSTing to edsy.org/import with the build in a 'loadout' field; that'd avoid some ugly URLs that are sometimes too long for some browsers :)
+
+1. Settings
+	1. Output
+		1. Market data in CSV format file
+		1. Market data in Trade Dangerous format file
+		1. Ship loadout
+		1. Automatically update on docking
+	1. EDDN
+		1. Send station data to the Elite Dangerous Data Network
+		1. Send system and scan data to the Elite Dangerous Data Network
+		1. Delay sending until docked
+	1. EDSM
+		1. Send flight log and Cmdr status to EDSM
+	1. Inara
+		1. Send flight log and Cmdr status to Inara
+	1. Configuration
+		1. Hotkey
+		1. Only when Elite Dangerous is the active app
+		1. Play sound
+		1. Preferred websites
+			1. Shipyard
+			1. System
+			1. Station
+	1. Appearance
+		1. Language
+		1. Theme
+			1. Default
+			1. Dark
+			1. Transparent
+		1. Always On top
+	1. Plugins
+		1. Plugins folder
