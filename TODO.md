@@ -51,9 +51,9 @@
 	1. Inara
 		1. Send flight log and Cmdr status to Inara
 	1. Configuration
-		1. Hotkey
-		1. Only when Elite Dangerous is the active app
-		1. Play sound
+		1. Hotkey - WORKS
+		1. Only when Elite Dangerous is the active app - Works for 'Off'
+		1. Play sound - WORKS
 		1. Preferred websites - WORKS
 			1. Shipyard - WORKS
 			1. System - WORKS
