@@ -11,3 +11,10 @@ dump
 *.wixobj
 *.xml
 *.zip
+TODO.html
+README.html
+Py3-notes.txt
+.??*.sw?
+*/.??*.sw?
+*/*/.??*.sw?
+envsetup

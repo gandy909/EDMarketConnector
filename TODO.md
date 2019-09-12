@@ -67,3 +67,6 @@
 		1. Always On top - WORKS
 	1. Plugins
 		1. Plugins folder
+
+1. Produce a windows executable with py2exe
+1. Investigate installer options
