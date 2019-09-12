@@ -64,7 +64,7 @@ class EDDN(object):
         try:
             try:
                 # Try to open existing file
-                self.replayfile = open(filename, 'r+')
+                self.replayfile = open(filename, 'r+', buffering=1)
             except:
                 if exists(filename):
                     raise	# Couldn't open existing file
