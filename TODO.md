@@ -38,7 +38,7 @@
 
 1. Settings
 	1. Output
-		1. Market data in CSV format file
+		1. Market data in CSV format file - WORKS
 		1. Market data in Trade Dangerous format file - WORKS
 		1. Ship loadout
 		1. Automatically update on docking
