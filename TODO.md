@@ -41,7 +41,7 @@
 		1. Market data in CSV format file - WORKS
 		1. Market data in Trade Dangerous format file - WORKS
 		1. Ship loadout - WORKS.  NB: EDMC won't export if it finds it's the same as the previously exported latest ship file.
-		1. Automatically update on docking
+		1. Automatically update on docking - WORKS
 	1. EDDN
 		1. Send station data to the Elite Dangerous Data Network - WORKS
 		1. Send system and scan data to the Elite Dangerous Data Network - WORKS
