@@ -64,6 +64,6 @@
 			1. Default - WORKS
 			1. Dark - WORKS
 			1. Transparent - WORKS
-		1. Always On top
+		1. Always On top - WORKS
 	1. Plugins
 		1. Plugins folder
