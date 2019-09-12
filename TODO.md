@@ -20,6 +20,7 @@
 			1. Station - WORKS
 	1. Inara
 		A quick test had credits balance and current ship update correctly.  Note that Inara won't accept API use as-is (I'm being cagey about why in case there are still bugs, I don't want any 'helpful' tester to spam his API with bad data).
+		1. Scans
 		1. Lookups
 			1. System - WORKS
 			1. Station - WORKS
