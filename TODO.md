@@ -59,7 +59,7 @@
 			1. System
 			1. Station
 	1. Appearance
-		1. Language
+		1. Language - WORKS (French tested)
 		1. Theme - WORKS
 			1. Default - WORKS
 			1. Dark - WORKS
