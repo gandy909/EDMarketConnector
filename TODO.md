@@ -40,7 +40,7 @@
 	1. Output
 		1. Market data in CSV format file - WORKS
 		1. Market data in Trade Dangerous format file - WORKS
-		1. Ship loadout
+		1. Ship loadout - WORKS
 		1. Automatically update on docking
 	1. EDDN
 		1. Send station data to the Elite Dangerous Data Network - WORKS
