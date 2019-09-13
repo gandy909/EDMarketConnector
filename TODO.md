@@ -1,3 +1,5 @@
+1. Get coriolis.py working with latest coriolis-data/ release.
+
 1. Revert the update cooldown to 60s.  companion.py 'holdoff' 93c4f85b3c4c25216ec5f5f62754671b9d8d04e2
 1. Revert the appname et al changes: 58f9f790a817fff95df239a3ae1f677c59e10ebd
 1. Revert update_feed change: cf7d7f77de7ec53cb79faffd35e5aac9d9e862fe
