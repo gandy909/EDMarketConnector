@@ -1,7 +1,6 @@
 1. Revert the update cooldown to 60s.  companion.py 'holdoff' 93c4f85b3c4c25216ec5f5f62754671b9d8d04e2
 1. Revert the appname et al changes: 58f9f790a817fff95df239a3ae1f677c59e10ebd
 1. Revert forcing bad CLIENT_ID: 3a8e317f09b390d5dee5602011f1567692bef225
-1. Ensure Inara is using main applongname, i.e. revery a130f9b827dbc268f5bc4951faaefd5877f362ca
 1. Test all data senders:
 	1. EDDN
 		1. Revert forcing "is_beta = True" in plugins/eddn.py e54226cbabf68d9e18e2d70b241ce667a788c00e
