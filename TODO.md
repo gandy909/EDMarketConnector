@@ -69,3 +69,4 @@
 1. EDMC.py - command-line interface
 1. Produce a windows executable with py2exe
 1. Investigate installer options
+1. Perhaps find all instances of 'EDMarketConnector' in code and replace with a global variable?  This would mean using different Windows Registry key, changing github URLs etc, all more easily than code edits all over the place.
