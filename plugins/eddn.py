@@ -443,7 +443,6 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
                 return("this.systemaddress is None, can't add SystemAddress")
             entry['SystemAddress'] = this.systemaddress
 
-        is_beta = True
         try:
             this.eddn.export_journal_entry(cmdr, is_beta, filter_localised(entry))
         except requests.exceptions.RequestException as e:
@@ -488,7 +487,6 @@ def cmdr_data(data, is_beta):
             if not old_status:
                 status['text'] = _('Sending data to EDDN...')
                 status.update_idletasks()
-            is_beta = True
             this.eddn.export_commodities(data, is_beta)
             this.eddn.export_outfitting(data, is_beta)
             this.eddn.export_shipyard(data, is_beta)
