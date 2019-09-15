@@ -10,7 +10,7 @@ applongname = 'Py3Miggy E:D Market Connector'
 appcmdname = 'Py3MiggyEDMC'
 appversion = '3.4.2.0'
 
-update_feed = 'https://miggy.org/edmarketconnector.xml'
+update_feed = 'https://ed.miggy.org/edmarketconnector.xml'
 update_interval = 47*60*60
 
 
