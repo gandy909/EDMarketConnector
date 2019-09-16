@@ -73,3 +73,57 @@
 1. Produce a windows executable with py2exe
 1. Investigate installer options
 1. Perhaps find all instances of 'EDMarketConnector' in code and replace with a global variable?  This would mean using different Windows Registry key, changing github URLs etc, all more easily than code edits all over the place.
+
+1. Full code reviews done:
+
+	commodity.py
+	companion.py
+	config.py
+	coriolis.py
+	dashboard.py
+	EDMarketConnector.py
+	(skipped EDMC.py for now)
+	(skipped edshipyard.py for now, only used in EDMC.py)
+	hotkey.py
+	(skipped loadout.py for now, only used in EDMC.py)
+	monitor.py
+	myNotebook.py
+		May need to test full plugin functionality in a test plugin to be sure
+	(skipped outfitting.py for now, only used in EDMC.py)
+	plug.py
+	protocol.py
+	setup.py
+		Leaving for now, this is for .exe packaging
+	(skipped shipyard.py for now, only used in EDMC.py)
+	stats.py
+	td.py
+	theme.py
+	ttkHyperlinkLabel.py
+	update.py
+
+1. Any gotchas in Languages other than English and French?  i.e. theme.py
+
+1. In general:
+	1. print "..." -> print("...")
+	1. x / y, when expecting an Integer result might need int(x/y)
+	1. cPickle -> pickle
+	1. plain <dict> isn't comparable to <dict>, so simple sorted() won't work.  Need to specify a key:
+			plugins/eddn.py:                message['economies'] = sorted(list([x for x in (data['lastStarport']['economies'] or {}).values()]), key=lambda x: x['name'])
+	1. Tkinter -> tkinter
+		-import Tkinter as tk
+		-import ttk
+		-import tkFileDialog
+		-import tkFont
+		-import tkMessageBox
+		+import tkinter as tk
+		+import tkinter.ttk
+		+import tkinter.filedialog
+		+import tkinter.font
+		+import tkinter.messagebox
+	1. unicode(s) -> str(s)
+	1. unichr(s) -> str(s)
+	1. import urlparse -> urllib.parse
+	1. .iteritems() -> .items()
+	1. Don't need to .encode('utf-8') if we already had strings and need strings.
+	1. If trying to .replace() we need <str> so may need to .decode() first.
+	1. Need to explictly list() some things.
