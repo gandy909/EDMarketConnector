@@ -69,8 +69,6 @@
 	1. Plugins
 		1. Plugins folder
 
-1. De-future remaining code:
-		grep -r 'from future' *
 1. EDMC.py - command-line interface
 1. Produce a windows executable with py2exe
 1. Investigate installer options
