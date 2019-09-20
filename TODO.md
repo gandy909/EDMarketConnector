@@ -82,19 +82,19 @@
 	coriolis.py
 	dashboard.py
 	EDMarketConnector.py
-	(skipped EDMC.py for now)
-	(skipped edshipyard.py for now, only used in EDMC.py)
+	EDMC.py
+	edshipyard.py
 	hotkey.py
-	(skipped loadout.py for now, only used in EDMC.py)
+	loadout.py
 	monitor.py
 	myNotebook.py
 		May need to test full plugin functionality in a test plugin to be sure
-	(skipped outfitting.py for now, only used in EDMC.py)
+	outfitting.py
 	plug.py
 	protocol.py
 	setup.py
 		Leaving for now, this is for .exe packaging
-	(skipped shipyard.py for now, only used in EDMC.py)
+	shipyard.py
 	stats.py
 	td.py
 	theme.py
