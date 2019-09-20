@@ -81,6 +81,7 @@
 	config.py
 	coriolis.py
 	dashboard.py
+		TODO: eddb,py
 	EDMarketConnector.py
 	EDMC.py
 	edshipyard.py
