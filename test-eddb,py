@@ -1,0 +1,34 @@
+#!/usr/bin/env python
+
+import argparse
+import requests
+import csv
+
+parser = argparse.ArgumentParser(description='Utilises eddb.io data files to produce... FIXME')
+parser.add_argument('-S', '--systems-file', help="Specify a local file copy of eddb.io's systems.csv")
+parser.add_argument('-s', '--stations-file', help="Specify a local file copy of eddb.io's stations.json")
+args = parser.parse_args()
+
+def load_file(filename):
+    eddb_baseurl = 'https://eddb.io/archive/v6/'
+    if filename == 'systems.csv':
+        if args.systems_file:
+            print('load_file: systems.csv from local file')
+            with open(args.systems_file, newline='') as csvfile:
+                return csvfile
+    elif filename == 'stations.json' and args.stations_file:
+        print('load_file: stations.json from local file')
+        with open(args.stations_file, newline='') as jsonfile:
+            return json.loads(jsonfile)
+    else:
+        r = requests.get('https://eddb.io/archive/v6/' + filename, stream=True)
+        print('\n%s\t%dK' % (filename, len(r.content) / 1024))
+        return r.iter_lines()
+
+systems = { int(s['id']) : {
+    'name'          : s['name'],
+    'x'            : float(s['x']),
+    'y'            : float(s['y']),
+    'z'            : float(s['z']),
+    'is_populated' : int(s['is_populated'])
+} for s in csv.DictReader(load_file('systems.csv')) }
