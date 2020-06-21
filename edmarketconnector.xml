@@ -173,11 +173,11 @@
 				<![CDATA[
 <style>body { font-family:"Segoe UI","Tahoma"; font-size: 75%; } h2 { font-family:"Segoe UI","Tahoma"; font-size: 105%; }</style>
 <h2>Release 3.46</h2>
-<p><b>This should be the final release of EDMC based on Python 2.7.</b> The next release after this, assuming this one doesn't introduce new bugs, will be based on Python 3.7.  Any plugins that users have installed will need to have been updated to work under Python 3.7 by the time that next version of EDMC is released.  During EDMC startup, at most once per day, you might see a popup with the text:
+<p><b>This should be the final release of EDMC based on Python 2.7.</b> The next release after this, assuming this one doesn't introduce new bugs, will be based on Python 3.7.  Any plugins that users have installed will need to have been updated to work under Python 3.7 by the time that next version of EDMC is released.  <s>During EDMC startup, at most once per day, you might see a popup with the text:</s>
 
 <blockquote>One or more of your enabled plugins do not yet have support for Python 3.x.  Please see the list on the 'Plugins' tab of 'File' > 'Settings'.  You should check if there is an updated version available, else alert the developer that they will need to update the code when EDMC moves to Python 3.x</blockquote>
 
-If so, do as it directs and check "File" > "Settings" > "Plugins" tab and see what plugins are listed in the section with the text "Plugins Without Python 3.x Support".
+A small bug means that popup will never appear, but you can still check "File" > "Settings" > "Plugins" tab and see what plugins are listed in the section with the text "Plugins Without Python 3.x Support".
 </p>
 <p>
 If any of your plugins are listed in that section then they will need updating, by you or the original developer, to work with Python 3.7.  See <a href="https://github.com/EDCD/EDMarketConnector/blob/master/PLUGINS.md#migration-to-python-37">Migrating To Python 3.7</a> for more information.
