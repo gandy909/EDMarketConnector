@@ -210,6 +210,9 @@ class _Theme:
                 self.register(child)
 
     def register_alternate(self, pair: tuple, gridopts: dict) -> None:
+        # This class is an import-time singleton, so can't do this in __init__
+        # as tkinter won't have been at all set up by then.
+        self.ttk_style = ttk.Style()
         self.widgets_pair.append((pair, gridopts))
 
     def button_bind(
@@ -511,6 +514,16 @@ class _Theme:
         if not self.minwidth:
             self.minwidth = root.winfo_width()  # Minimum width = width on first creation
             root.minsize(self.minwidth, -1)
+
+        #######################################################################
+        # Update our ttk.Style
+        #
+        # Ref: <https://stackoverflow.com/a/54476816>
+        # Ref: <https://tkdocs.com/shipman/ttk-style-layer.html>
+        ######################################################################
+        self.ttk_style.configure('TSizegrip', background=self.current['background'])
+        self.ttk_style.configure('TSizegrip', foreground=self.current['foreground'])
+        #######################################################################
 
 
 # singleton
