@@ -616,9 +616,11 @@ class AppWindow:
         self.status.grid(row=0, column=0, sticky=tk.W)
 
         # Make the window resizable
-        master.resizable(True, False)
+        # Yes, we need to allow vertical resizing, else theme changing can
+        # cause the botttom of the UI to be irretrievably hidden.
+        master.resizable(True, True)
         ttk_grip = ttk.Sizegrip(self.status_row, name='size_grip')
-        ttk_grip.grid(row=0, column=1, sticky=tk.SE)
+        ttk_grip.grid(row=0, column=1, sticky=tk.E)
         #######################################################################
 
         # Bottom 'status' line.
