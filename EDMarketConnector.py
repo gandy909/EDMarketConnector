@@ -21,6 +21,7 @@ import webbrowser
 from os import chdir, environ, path
 from time import localtime, strftime, time
 from typing import TYPE_CHECKING, Any, Literal
+
 from constants import applongname, appname, protocolhandler_redirect
 
 # Have this as early as possible for people running EDMarketConnector.exe
@@ -255,7 +256,7 @@ if __name__ == '__main__':  # noqa: C901
             # If *this* instance hasn't locked, then another already has and we
             # now need to do the edmc:// checks for auth callback
             if locked != JournalLockResult.LOCKED:
-                from ctypes import windll, c_int, create_unicode_buffer, WINFUNCTYPE
+                from ctypes import WINFUNCTYPE, c_int, create_unicode_buffer, windll
                 from ctypes.wintypes import BOOL, HWND, INT, LPARAM, LPCWSTR, LPWSTR
 
                 EnumWindows = windll.user32.EnumWindows  # noqa: N806
@@ -415,6 +416,7 @@ import tkinter.filedialog
 import tkinter.font
 import tkinter.messagebox
 from tkinter import ttk
+
 import commodity
 import plug
 import prefs
