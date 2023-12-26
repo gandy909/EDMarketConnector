@@ -614,6 +614,7 @@ class AppWindow:
         self.status_row.columnconfigure(0, weight=99)
         self.status_row.columnconfigure(1, weight=1)
 
+        # Bottom 'status' line.
         self.status = tk.Label(self.status_row, name='status', anchor=tk.W)
         self.status.grid(row=0, column=0, sticky=tk.W)
 
@@ -624,10 +625,6 @@ class AppWindow:
         ttk_grip = ttk.Sizegrip(self.status_row, name='size_grip')
         ttk_grip.grid(row=0, column=1, sticky=tk.E)
         #######################################################################
-
-        # Bottom 'status' line.
-        self.status = tk.Label(frame, name='status', anchor=tk.W)
-        self.status.grid(columnspan=2, sticky=tk.EW)
 
         for child in frame.winfo_children():
             child.grid_configure(padx=self.PADX, pady=(
